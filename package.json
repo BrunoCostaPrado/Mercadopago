@@ -1,0 +1,25 @@
+{
+  "name": "pagar",
+  "version": "1.0.0",
+  "description": "Teste de API do Mercado Pago.",
+  "main": "mercadopago.js",
+  "dependencies": {
+    "-": "0.0.1",
+    "d": "^1.0.1",
+    "mercadopago": "^1.5.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoCostaPrado/Mercadopago.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoCostaPrado/Mercadopago/issues"
+  },
+  "homepage": "https://github.com/BrunoCostaPrado/Mercadopago#readme"
+}

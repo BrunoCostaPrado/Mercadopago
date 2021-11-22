@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    // SDK MercadoPago.js V2
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <title>Mercado Pago</title>
-  </head>
-  <body>
-    <script>
-      // Adicione as credenciais do SDK
-      const mp = new MercadoPago("PUBLIC_KEY", {
-        locale: "pt-BR",
-      });
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <script src="mercadopago.js"></script>
 
-      // Inicialize o checkout
-      mp.checkout({
-        preference: {
-          id: "YOUR_PREFERENCE_ID",
-        },
-        render: {
-          container: ".cho-container", // Indique o nome da class onde será exibido o botão de pagamento
-          label: "Pagar", // Muda o texto do botão de pagamento (opcional)
-        },
-      });
-    </script>
-  </body>
+  <title>Mercado pago</title>
+</head>
+<body>
+  <script>
+    const mp = new MercadoPago('TEST-cc487ec6-4e40-4cad-bbe1-040a003893e3');
+</script>
+<form id="form-checkout" >
+   <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
+   <input type="text" name="cardExpirationMonth" id="form-checkout__cardExpirationMonth" />
+   <input type="text" name="cardExpirationYear" id="form-checkout__cardExpirationYear" />
+   <input type="text" name="cardholderName" id="form-checkout__cardholderName"/>
+   <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail"/>
+   <input type="text" name="securityCode" id="form-checkout__securityCode" />
+   <select name="issuer" id="form-checkout__issuer"></select>
+   <select name="identificationType" id="form-checkout__identificationType"></select>
+   <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
+   <select name="installments" id="form-checkout__installments"></select>
+   <button type="submit" id="form-checkout__submit">Pagar</button>
+   <progress value="0" class="progress-bar">Carregando...</progress>
+</form>
+</body>
 </html>
